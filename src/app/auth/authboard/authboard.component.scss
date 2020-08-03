@@ -1,0 +1,26 @@
+.main-container {
+  top: auto;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+mat-card {
+  width: 40%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+mat-card-content {
+  margin-top: 20px;
+}
+
+.example-full-width {
+  width: 80%;
+  margin: auto;
+}
