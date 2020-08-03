@@ -10,18 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { HostDashboardComponent } from './host-dashboard/host-dashboard.component';
 import {AuthModule} from './auth/auth.module';
+import {AdminModule} from './admin/admin.module';
+import {HostModule} from './host/host.module';
+import {RenterModule} from './renter/renter.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AdminDashboardComponent,
-    HostDashboardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +36,10 @@ import {AuthModule} from './auth/auth.module';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    AuthModule
+    AuthModule,
+    AdminModule,
+    HostModule,
+    RenterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
