@@ -1,19 +1,27 @@
-<form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmitSignIn()" class="sign-in-form">
+<form name="loginForm" (ngSubmit)="onSubmitSigin()" class="sign-in-form">
   <div class="row-control">
-    <mat-form-field>
-      <label>
-        <input matInput placeholder="Username" formControlName="username">
-      </label>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field>
+        <label>
+          <input matInput placeholder="Username" name="username" [(ngModel)]="loginForm.username">
+        </label>
+      </mat-form-field>
+    </div>
   </div>
   <div class="row-control">
-    <mat-form-field>
-      <label>
-        <input matInput placeholder="Password" formControlName="password" type="password">
-      </label>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field>
+        <label>
+          <input matInput placeholder="Password" name="password" [(ngModel)]="loginForm.password" type="password">
+        </label>
+      </mat-form-field>
+    </div>
+
   </div>
-  <div class="example-button-row">
-    <button mat-raised-button color="primary" type="submit" class="login-button">SignIn</button>
+  <div class="form-group">
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" type="submit" class="login-button">SignIn</button>
+    </div>
   </div>
+
 </form>

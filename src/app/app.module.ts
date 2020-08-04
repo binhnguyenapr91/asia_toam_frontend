@@ -17,6 +17,9 @@ import {AuthModule} from './auth/auth.module';
 import {AdminModule} from './admin/admin.module';
 import {HostModule} from './host/host.module';
 import {RenterModule} from './renter/renter.module';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {AuthInterceptor} from './_helper/auth.interceptor';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,9 +42,14 @@ import {RenterModule} from './renter/renter.module';
     AuthModule,
     AdminModule,
     HostModule,
-    RenterModule
+    RenterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
