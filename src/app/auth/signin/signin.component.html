@@ -1,4 +1,4 @@
-<form name="loginForm" (ngSubmit)="onSubmitSigin()" class="sign-in-form">
+<form name="loginForm" (ngSubmit)="onSubmitSigin()" #f="ngForm" class="sign-in-form">
   <div class="row-control">
     <div class="form-group">
       <mat-form-field>
@@ -16,12 +16,22 @@
         </label>
       </mat-form-field>
     </div>
-
   </div>
   <div class="form-group">
     <div class="example-button-row">
       <button mat-raised-button color="primary" type="submit" class="login-button">SignIn</button>
     </div>
   </div>
-
+  <div class="form-group">
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="f.submitted && isLoginFailed"
+    >
+      Login failed: {{ errorMessage }}
+    </div>
+  </div>
 </form>
+<div class="alert alert-success" *ngIf="isLoggedIn">
+  Logged in as {{ roles }}.
+</div>
