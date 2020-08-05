@@ -7,14 +7,14 @@
         </label>
         <mat-error *ngIf="signUpForm.controls.username.touched && signUpForm.controls.username.invalid">
           <span *ngIf="signUpForm.controls.username.errors.required">
-            Please enter your username
+            Please enter your username!
           </span>
           <span
             *ngIf="signUpForm.controls.username.errors.minlength || signUpForm.controls.username.errors.maxlength">
                       Length form 6 to 20 character!
                     </span>
           <span *ngIf="signUpForm.get('username').hasError('pattern')">
-                      Only charater accepted
+                      Only charater accepted!
                     </span>
         </mat-error>
       </mat-form-field>
@@ -48,7 +48,7 @@
           <span
             *ngIf="signUpForm.get('pwGroup').get('password').hasError('minlength') ||
                       signUpForm.get('pwGroup').get('password').hasError('maxlength')">
-                      Length from 6 to 50
+                      Length from 6 to 50!
                     </span>
         </mat-error>
       </mat-form-field>
@@ -60,7 +60,7 @@
                  [errorStateMatcher]="matcher">
         </label>
         <mat-error *ngIf="signUpForm.hasError('passwordNotMatch', 'pwGroup')">
-          Password not match
+          Password not match!
         </mat-error>
       </mat-form-field>
     </div>
