@@ -6,7 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -18,21 +18,22 @@ import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [AuthboardComponent, SignupComponent, SigninComponent],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    MatTabsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatDatepickerModule,
-    FlexLayoutModule,
-    MatIconModule,
-    MatListModule,
-    MatSelectModule
-  ]
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatTabsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatRadioModule,
+        MatDatepickerModule,
+        FlexLayoutModule,
+        MatIconModule,
+        MatListModule,
+        MatSelectModule,
+        FormsModule
+    ]
 })
 export class AuthModule { }
