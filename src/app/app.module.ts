@@ -20,7 +20,7 @@ import {RenterModule} from './renter/renter.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './_helper/auth.interceptor';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 @NgModule({
   declarations: [
     AppComponent
@@ -43,7 +43,8 @@ import {HttpClientModule} from '@angular/common/http';
     AdminModule,
     HostModule,
     RenterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
