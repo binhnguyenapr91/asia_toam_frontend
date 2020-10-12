@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "asia-toam-frontend"
+  "defaultProject": "asia-toam-frontend",
+  "cli": {
+    "analytics": "1f1a8339-68ac-4fb2-8d99-f74b2391a4aa"
+  }
 }
